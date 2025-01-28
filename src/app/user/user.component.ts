@@ -9,15 +9,17 @@ import { Component , EventEmitter, Input, input, Output } from '@angular/core';
 export class UserComponent {
   // user Input if want this component reusable
   //input decorator
-  @Input({required:true}) id!:string
-  @Input({required:true}) avater!: string
-  @Input({ required: true }) name!: string
+  @Input({required:true}) users!:{
+  id: string;
+  avatar: string;
+  name:string
+  }
   @Output() select = new EventEmitter<string>();
   
   get imagePath() {
-    return 'assets/users/' + this.avater;
+    return 'assets/users/' + this.users.avatar;
   }
   onSelectUser() {
-    this.select.emit(this.id);
+    this.select.emit(this.users.id);
   }
 }
