@@ -10,7 +10,8 @@ import { type User } from './user.model';
 export class UserComponent {
   // user Input if want this component reusable
   //input decorator
-  @Input({required:true}) users!:User
+  @Input({ required: true }) users!: User;
+  @Input() selected!: boolean;
   @Output() select = new EventEmitter<string>();
   
   get imagePath() {
