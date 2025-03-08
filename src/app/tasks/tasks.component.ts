@@ -3,6 +3,7 @@ import { TaskComponent } from "./task/task.component";
 import { DUMMY_TASKS } from '../DUMMY_TASKS';
 import { NewTaskComponent } from "./new-task/new-task.component";
 import { NewTask } from './task/task.model';
+import { TaskService } from './tasks.service';
 @Component({
   selector: 'app-tasks',
   standalone: true,
@@ -11,15 +12,13 @@ import { NewTask } from './task/task.model';
   styleUrl: './tasks.component.css'
 })
 export class TasksComponent {
+  constructor(private taskService:TaskService){}
   userTasks = DUMMY_TASKS
   @Input({required:true}) userId!:string
   @Input({ required: true }) name!: string
   isAddTask = false;
   get selectedUserTasks() {
-    return this.userTasks.filter((task)=> task.userId === this.userId)
-  }
-  onCompleteTask(id:string) {
-    this.userTasks= this.userTasks.filter((userTask) => userTask.id !== id);
+    return this.taskService.getUserTasks(this.userId)
   }
   onStartAddTask() {
     this.isAddTask = true;
