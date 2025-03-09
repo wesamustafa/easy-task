@@ -1,6 +1,7 @@
 # EasyTask
 ## Enterprise-level task management without friction
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+<img width="647" alt="Screenshot 2025-03-10 011333" src="https://github.com/user-attachments/assets/1d8553d2-fc5b-454c-a8ce-f0c1eecccae4" />
 
 ## Development server
 
