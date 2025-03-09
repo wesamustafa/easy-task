@@ -2,6 +2,7 @@
 ## Enterprise-level task management without friction
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
 <img width="647" alt="Screenshot 2025-03-10 011333" src="https://github.com/user-attachments/assets/1d8553d2-fc5b-454c-a8ce-f0c1eecccae4" />
+<img width="372" alt="Screenshot 2025-03-10 011441" src="https://github.com/user-attachments/assets/a5c1a494-1b50-41d7-b231-a3e2b1e0b5ff" />
 
 ## Development server
 
